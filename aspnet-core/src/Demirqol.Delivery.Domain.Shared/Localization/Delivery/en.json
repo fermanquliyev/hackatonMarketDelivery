@@ -1,0 +1,24 @@
+{
+  "culture": "en",
+  "texts": {
+    "Menu:Home": "Home",
+    "Welcome": "Welcome",
+    "LongWelcomeMessage": "Welcome to the delivery application startup of Demirgoal Team",
+    "Menu:Store": "Sale Management",
+    "Menu:Items": "Products",
+    "Menu:Orders": "Orders",
+    "Menu:Markets": "Markets",
+    "NewItem": "New Product",
+    "Edit": "Edit",
+    "Delete": "Delete",
+    "SetStockCount": "Set Stock Count",
+    "CreationTime": "Creation Time",
+    "Name": "Name",
+    "Description": "Description",
+    "Tenant": "Tenant",
+    "Item": "Item",
+    "NewMarket": "New Market",
+    "TotalQuantity": "Total Quantity",
+    "TotalSum": "Total Sum"
+  }
+}

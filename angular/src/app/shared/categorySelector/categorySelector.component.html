@@ -1,0 +1,8 @@
+<div class="form-group">
+  <label for="Categories">Categories</label>
+  <select [(ngModel)]="selectedCategory" [required]="required" id="Categories" (ngModelChange)="selectedCategoryChange.emit($event)" name="Categories"
+    class="form-control">
+    <option [ngValue]="undefined" *ngIf="!required">Not Selected</option>
+    <option *ngFor="let item of categories" [ngValue]="item.id">{{item.name}}</option>
+  </select>
+</div>

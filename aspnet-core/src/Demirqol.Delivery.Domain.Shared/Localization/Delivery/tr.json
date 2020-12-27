@@ -1,0 +1,24 @@
+﻿{
+  "culture": "tr",
+  "texts": {
+    "Menu:Home": "Ana sayfa",
+    "Welcome": "Hoşgeldiniz",
+    "LongWelcomeMessage": "Uygulamaya hoşgeldiniz. Bu, Demirqol team tarafından bina edilmiş bir başlangıç projesidir.",
+    "Menu:Store": "Satış Merkezi",
+    "Menu:Items": "Ürünler",
+    "Menu:Orders": "Siparişler",
+    "Menu:Markets": "Mağazalar",
+    "NewItem": "Yeni ürün",
+    "Edit": "Düzenle",
+    "Delete": "Sil",
+    "SetStockCount": "Stok miktarını belirle",
+    "CreationTime": "Yaranma tarihi",
+    "Name": "İsim",
+    "Description": "Açıklama",
+    "Tenant": "Satıcı",
+    "Item": "Ürün",
+    "NewMarket": "Yeni mağaza",
+    "TotalQuantity": "Toplam miktar",
+    "TotalSum": "Toplam fiyat"
+  }
+}

@@ -1,0 +1,115 @@
+<div class="card">
+  <div class="card-header">
+    <div class="row">
+      <div class="col col-md-6">
+        <h5 class="card-title">
+          {{ '::Menu:Markets' | abpLocalization }}
+        </h5>
+      </div>
+      <div class="text-right col col-md-6">
+        <div class="text-lg-right pt-2" *ngIf="tenantId">
+          <button id="create" class="btn btn-primary" type="button" (click)="createItem()">
+            <i class="fa fa-plus mr-1"></i>
+            <span>{{ "::NewMarket" | abpLocalization }}</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="car-header" *ngIf="!tenantId">
+    <div class="row">
+      <div class="col-md-3">
+        <app-tenant-selector [(selectedTenant)]="input.tenantId"></app-tenant-selector>
+      </div>
+      <div class="col-md-3">
+        <label for="" style="color: transparent;">Search</label>
+        <button type="button" (click)="list.get()" class="btn btn-primary btn-lg btn-block">Refresh</button>
+      </div>
+    </div>
+  </div>
+  <div class="card-body">
+    <ngx-datatable [rows]="items.items" [count]="items.totalCount" [list]="list" default>
+      <ngx-datatable-column [name]="'::Actions' | abpLocalization" [maxWidth]="150" [sortable]="false">
+        <ng-template let-row="row" ngx-datatable-cell-template>
+          <div ngbDropdown container="body" class="d-inline-block">
+            <button class="btn btn-primary btn-sm dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+              ngbDropdownToggle>
+              <i class="fa fa-cog mr-1"></i>{{ '::Actions' | abpLocalization }}
+            </button>
+            <div ngbDropdownMenu>
+              <button ngbDropdownItem (click)="createItem(row)" *ngIf="tenantId">
+                {{ '::Edit' | abpLocalization }}
+              </button>
+              <button ngbDropdownItem (click)="delete(row.id)">
+                {{ '::Delete' | abpLocalization }}
+              </button>
+            </div>
+          </div>
+        </ng-template>
+      </ngx-datatable-column>
+      <ngx-datatable-column [name]="'::Name' | abpLocalization" prop="name"></ngx-datatable-column>
+      <ngx-datatable-column [name]="'::Address' | abpLocalization" prop="address"></ngx-datatable-column>
+      <ngx-datatable-column [name]="'::Tenant' | abpLocalization" prop="tenantId">
+        <ng-template let-row="row" ngx-datatable-cell-template>
+          {{ getTenantName(row.tenantId) }}
+        </ng-template>
+      </ngx-datatable-column>
+    </ngx-datatable>
+  </div>
+</div>
+
+
+<abp-modal #itemModal [(visible)]="isModalOpen">
+  <ng-template #abpHeader>
+    <h3>{{ '::Market' | abpLocalization }}</h3>
+  </ng-template>
+
+  <ng-template #abpBody>
+    <form (ngSubmit)="save()" #form="ngForm">
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="form-group">
+            <label for="item-name">Name</label><span> * </span>
+            <input type="text" name="name" id="item-name" required class="form-control" [(ngModel)]="itemDto.name"
+              autofocus />
+          </div>
+          <div class="form-group">
+            <label for="item-code">Address</label><span> * </span>
+            <input type="text" name="code" id="item-code" required class="form-control" [(ngModel)]="itemDto.address" />
+          </div>
+
+          <div class="form-group">
+            <label for="item-description">Latitude</label>
+            <input type="text" name="description" id="item-description" required class="form-control"
+              [(ngModel)]="itemDto.latitude" />
+          </div>
+
+          <div class="form-group">
+            <label for="item-barcode">Longitude</label>
+            <input type="text" name="barcode" id="item-barcode" required class="form-control"
+              [(ngModel)]="itemDto.longitude" />
+          </div>
+
+          <div class="form-group">
+            <label for="item-price">IsDefault</label>
+            <input type="checkbox" name="price" id="item-price" class="form-control"
+              [(ngModel)]="itemDto.isDefault" />
+          </div>
+        </div>
+      </div>
+
+    </form>
+  </ng-template>
+
+  <ng-template #abpFooter>
+    <button type="button" class="btn btn-secondary" #abpClose (click)="itemModal.visible=false;">
+      {{ '::Close' | abpLocalization }}
+    </button>
+
+    <!--added save button-->
+    <button class="btn btn-primary" (click)="save()" [disabled]="!form || form.invalid">
+      <i class="fa fa-check mr-1"></i>
+      {{ '::Save' | abpLocalization }}
+    </button>
+  </ng-template>
+</abp-modal>
