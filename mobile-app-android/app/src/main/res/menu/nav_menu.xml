@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/ic_home"
+        android:icon="@drawable/ic_home"
+        android:title="Discovery"/>
+
+    <item
+        android:id="@+id/ic_nearby"
+        android:icon="@drawable/ic_location"
+        android:title="Nearby"/>
+
+    <item
+        android:id="@+id/ic_categories"
+        android:icon="@drawable/ic_category"
+        android:title="Search"/>
+
+    <item
+        android:id="@+id/ic_virtual_cart"
+        android:icon="@drawable/ic_cart"
+        android:title="Cart"/>
+
+    <item
+        android:id="@+id/ic_discount"
+        android:icon="@drawable/ic_discount"
+        android:title="Discounts"/>
+
+    <!--<item
+        android:id="@+id/ic_profile"
+        android:icon="@drawable/ic_profile"
+        android:title="Profile"/>-->
+
+</menu>

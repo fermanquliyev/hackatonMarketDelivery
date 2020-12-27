@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Online Market Delivery</string>
+    <string name="tv_head">Qeydiyyat</string>
+    <string name="only_letters">Yalnız hərflərdən istifadə olunmalıdır!</string>
+    <string name="first_name">Adı</string>
+    <string name="surname">Soyad</string>
+    <string name="phone_number">Əlaqə telefonu</string>
+    <string name="email">E-mail</string>
+    <string name="password">Şifrə</string>
+    <string name="confirm_password">Şifrəni təsdiqlə</string>
+    <string name="sign_up">TƏSDİQLƏ</string>
+    <string name="sign_in">DAXİL OL</string>
+    <string name="registration">QEYDİYYAT</string>
+    <string name="forgot_password">Şifrəni unutdunuz?</string>
+</resources>

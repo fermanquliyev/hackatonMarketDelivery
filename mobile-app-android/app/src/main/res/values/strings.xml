@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Online Market Delivery</string>
+    <string name="tv_head">REGISTRATION</string>
+    <string name="only_letters">Only letters can be used!</string>
+    <string name="first_name">First name</string>
+    <string name="surname">Surname</string>
+    <string name="phone_number">Phone number</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="sign_up">SIGN UP</string>
+    <string name="sign_in">SIGN IN</string>
+    <string name="registration">REGISTRATION</string>
+    <string name="forgot_password">Forgot password?</string>
+</resources>
