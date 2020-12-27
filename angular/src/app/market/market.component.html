@@ -17,13 +17,15 @@
     </div>
   </div>
   <div class="car-header" *ngIf="!tenantId">
-    <div class="row">
-      <div class="col-md-3">
-        <app-tenant-selector [(selectedTenant)]="input.tenantId"></app-tenant-selector>
-      </div>
-      <div class="col-md-3">
-        <label for="" style="color: transparent;">Search</label>
-        <button type="button" (click)="list.get()" class="btn btn-primary btn-lg btn-block">Refresh</button>
+    <div class="container-fluid py-2">
+      <div class="row">
+        <div class="col-md-3">
+          <app-tenant-selector [(selectedTenant)]="input.tenantId"></app-tenant-selector>
+        </div>
+        <div class="col-md-3">
+          <label for="" style="color: transparent;">Search</label>
+          <button type="button" (click)="list.get()" class="btn btn-primary btn-lg btn-block">Refresh</button>
+        </div>
       </div>
     </div>
   </div>
