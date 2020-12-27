@@ -31,9 +31,9 @@ namespace Demirqol.Delivery.Permissions
             var market = context.AddGroup(MarketPermissions.GroupName);
 
             //Define your own permissions here. Example:
-            market.AddPermission(MarketPermissions.CreateMarket, L("Permission:CreateUpdate"));
-            market.AddPermission(MarketPermissions.DeleteMarket, L("Permission:Delete"));
-            market.AddPermission(MarketPermissions.GetMarkets, L("Permission:SetStockCount"));
+            market.AddPermission(MarketPermissions.CreateMarket, L("Permission:CreateMarket"));
+            market.AddPermission(MarketPermissions.DeleteMarket, L("Permission:DeleteMarket"));
+            market.AddPermission(MarketPermissions.GetMarkets, L("Permission:GetMarkets"));
         }
 
         private static LocalizableString L(string name)
